@@ -1,20 +1,20 @@
 //Inicia alert bienvenido
-let nombre = prompt("¿Cómo te llamas?");
+let nombre = prompt("¿Cómo te llamas?").toLowerCase();
 let mensajeBienvenida = `¡Hola ${nombre}! Bienvenido al Estudio Contable Lucero Altamirano`;
 alert(mensajeBienvenida);
 //Termina alert bienvenido
 
 //Inicia section if - else if
-let categoriaIf = prompt("Ingrese su categoría");
+let categoriaIf = prompt("Ingrese su categoría (monotributista, responsable inscripto, sujeto exento)").toLowerCase();
 
-if (categoriaIf === "Monotributista") {
-    alert("Usted es monotributista");
+if (categoriaIf === "monotributista") {
+    alert("Usted es Monotributista");
 }
-else if (categoriaIf === "Responsable inscripto") {
+else if (categoriaIf === "responsable inscripto") {
     alert("Usted es Responsable inscripto");
 }
-else if(categoriaIf === "Responsable exento") {
-    alert("Usted es Resonsable exento");
+else if(categoriaIf === "sujeto exento") {
+    alert("Usted es Sujeto exento");
 }
 else {
     alert("No se reconoce su categoria");
@@ -23,9 +23,9 @@ else {
 
 //Inicia section for y while
 for (let turno = 1; turno <= 5; turno++) {
-    let pedirTurno = prompt("Si usted desea pedir un turno escriba 'si', en caso contrario escriba 'no'");
+    let pedirTurno = prompt("Si usted desea pedir un turno escriba 'si', en caso contrario escriba 'no'").toLowerCase();
     while (pedirTurno !="no"){
-        let nombre = prompt("Usted desea reservar un turno. Ingrese su nombre");
+        let nombre = prompt("Usted desea reservar un turno. Ingrese su nombre").toLowerCase();
         let mensaje = `${nombre}, usted tiene el turno #${turno}`
         alert(mensaje);
         break;
@@ -47,7 +47,7 @@ switch(categoria) {
     break;
 
     case "responsable exento":
-    alert("Usted es responsable exento");
+    alert("Usted es sujeto exento");
     break;
 
     default:
@@ -58,8 +58,8 @@ switch(categoria) {
 
 //Incia section function
 function pedirNombreYCategoria() {
-    let nombre = prompt("Ingrese su nombre");
-    let categoria = prompt("Ingrese su categoria");
+    let nombre = prompt("Ingrese su nombre").toLowerCase();
+    let categoria = prompt("Ingrese su categoria").toLowerCase();
     let mensaje = `¡Bienvendio ${nombre} al Estudio Contable Lucero Altamirano! Su condicion fiscal es: ${categoria}`;
     alert(mensaje);
 }
